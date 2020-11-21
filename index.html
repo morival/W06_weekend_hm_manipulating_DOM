@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/app.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <h1>Endangered Animals </h1>
+    <h3>Add Animal to the List</h3>
+    <form id="form">
+        <div id="form-container">
+            <div class="form-item">
+                <label for="name" class="form-label">Common Name</label>
+                <input type="text" id="name" required>
+            </div>
+            <div class="form-item">
+                <label for="population" class="form-label">Population</label>
+                <input type="number" id="population" min="1" required>
+            </div>
+            <div class="form-item">
+                <label for="status" class="form-label">Status</label>
+                <select id="status" required>
+                    <option value="" disabled selected>select</option>
+                    <option value="Critically Endangered">Critically Endangered</option>
+                    <option value="Endangered">Endangered</option>
+                    <option value="Vulnerable">Vulnerable</option>
+                  </select>
+            </div>
+        </div>
+        <input type="submit" value="Add">
+    </form>
+    <h2>List of Endangered Species</h2>
+    <ul id="animal-list"></ul>
+    <button id="delete-button">Delete All</button>
+</body>
+</html>
