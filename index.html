@@ -22,15 +22,50 @@
             </div>
             <div class="form-item">
                 <label for="status" class="form-label">Status</label>
-                <select id="status" required>
+                <div class="radio">
+                    <input type="radio" id="crit-endangered" name="status" value="Critically Endangered">
+                    <label for="crit-endangered">Critically Endangered</label><br>
+                    <input type="radio" id="endangered" name="status" value="Endangered">
+                    <label for="endangered">Endangered</label><br>
+                    <input type="radio" id="vulnerable" name="status" value="Vulnerable">
+                    <label for="vulnerable">Vulnerable</label>
+                </div>
+                <!-- <select id="status" required>
                     <option value="" disabled selected>select</option>
                     <option value="Critically Endangered">Critically Endangered</option>
                     <option value="Endangered">Endangered</option>
                     <option value="Vulnerable">Vulnerable</option>
-                  </select>
+                  </select> -->
+            </div>
+            <div class="form-item">
+                <input type="checkbox" id="habitat">
+                <button type="button">
+                    <label for="habitat">Habitat</label>
+                </button>
+                <span id="content">
+                    <button type="button">
+                        <label for="deserts">Deserts</label>
+                        <input type="checkbox" id="deserts" name="habitats" value="Deserts">
+                        <label for="grasslands">Grasslands</label>
+                        <input type="checkbox" id="grasslands" name="habitats" value="Grasslands">
+                        <label for="forests">Forests</label>
+                        <input type="checkbox" id="forests" name="habitats" value="Forests">
+                        <label for="mountains">Mountains</label>
+                        <input type="checkbox" id="mountains" name="habitats" value="Mountains">
+                        <label for="oceans">Oceans</label>
+                        <input type="checkbox" id="oceans" name="habitats" value="Oceans">
+                        <label for="wetlands">Wetlands</label>
+                        <input type="checkbox" id="wetlands" name="habitats" value="Wetlands">
+                        <label for="freshwater">Freshwater</label>
+                        <input type="checkbox" id="freshwater" name="habitats" value="Freshwater">
+                        
+
+                    </button>
+                </span>
             </div>
         </div>
-        <input type="submit" value="Add">
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
     </form>
     <h2>List of Endangered Species</h2>
     <ul id="animal-list"></ul>

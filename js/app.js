@@ -33,11 +33,23 @@ const createListPosition = function (form) {
 
     // Output Population
     const population = document.createElement('h4');
-    population.textContent = form.population.value;
+    population.textContent = `Population: ${form.population.value}`;
 
     // Output Status
     const status = document.createElement('h4');
     status.textContent = form.status.value;
+
+    // Output Habitat
+    const habitatList = document.createElement('h4');
+    habitatList.textContent = ""
+    const habitats = form.habitats
+    for (const habitat in habitats) {
+        if (habitat.checked === true) {
+            habitatList.textContent += `${habitat.value} `;
+        };
+    };
+    
+    
 
     // Output Position
     const listPosition = document.createElement('li');
@@ -45,6 +57,7 @@ const createListPosition = function (form) {
     listPosition.appendChild(name);
     listPosition.appendChild(population);
     listPosition.appendChild(status);
+    listPosition.appendChild(habitatList);
 
     return listPosition;
 };

@@ -35,3 +35,6 @@ body {
     display: flex;
     justify-content: space-evenly;
 }
+
+#habitat,#content{display:none;}
+#habitat:checked~#content{display:block;}
